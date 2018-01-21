@@ -1,0 +1,16 @@
+<div>
+  <label for="search">Search:</label>
+  <input #search id="search" 
+    type="search"
+    placeholder="search art items"
+    (keyup)="searchArt(search.value)"
+    autofocus/>
+</div>
+<app-art-list [searchModel]="searchModel$ | async"></app-art-list>
+<!-- <div *ngIf="isLoading">
+  loading..
+</div>
+<div *ngIf="!isLoading">
+  <h2>Items</h2>
+  <p *ngFor="let item of artItems$ | async">{{item.title}}</p>
+</div> -->

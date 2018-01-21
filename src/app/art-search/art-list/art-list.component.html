@@ -1,0 +1,7 @@
+<div *ngIf="searchModel.isLoading">
+  loading..
+</div>
+<div *ngIf="!searchModel.isLoading">
+  <h2>Items</h2>
+  <p *ngFor="let item of searchModel.artItems">{{item.title}}</p>
+</div>

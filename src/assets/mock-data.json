@@ -1,0 +1,176 @@
+{
+    "elapsedMilliseconds": 912,
+    "count": 620338,
+    "artObjects": [
+      {
+        "links": {
+          "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-3580",
+          "web": "https://www.rijksmuseum.nl/en/collection/SK-A-3580"
+        },
+        "id": null,
+        "objectNumber": "SK-A-3580",
+        "title": "The Singel Bridge at the Paleisstraat in Amsterdam",
+        "hasImage": true,
+        "principalOrFirstMaker": "",
+        "longTitle": null,
+        "showImage": false,
+        "permitDownload": false,
+        "webImage": null,
+        "headerImage": null,
+        "productionPlaces": []
+      },
+      {
+        "links": {
+          "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-447",
+          "web": "https://www.rijksmuseum.nl/en/collection/SK-A-447"
+        },
+        "id": null,
+        "objectNumber": "SK-A-447",
+        "title": "Fishing for Souls",
+        "hasImage": true,
+        "principalOrFirstMaker": "",
+        "longTitle": null,
+        "showImage": false,
+        "permitDownload": false,
+        "webImage": null,
+        "headerImage": null,
+        "productionPlaces": []
+      },
+      {
+        "links": {
+          "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-4",
+          "web": "https://www.rijksmuseum.nl/en/collection/SK-A-4"
+        },
+        "id": null,
+        "objectNumber": "SK-A-4",
+        "title": "The Threatened Swan",
+        "hasImage": true,
+        "principalOrFirstMaker": "",
+        "longTitle": null,
+        "showImage": false,
+        "permitDownload": false,
+        "webImage": null,
+        "headerImage": null,
+        "productionPlaces": []
+      },
+      {
+        "links": {
+          "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-404",
+          "web": "https://www.rijksmuseum.nl/en/collection/SK-A-404"
+        },
+        "id": null,
+        "objectNumber": "SK-A-404",
+        "title": "Gallant Conversation, Known as ‘The Paternal Admonition’",
+        "hasImage": true,
+        "principalOrFirstMaker": "",
+        "longTitle": null,
+        "showImage": false,
+        "permitDownload": false,
+        "webImage": null,
+        "headerImage": null,
+        "productionPlaces": []
+      },
+      {
+        "links": {
+          "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-1365",
+          "web": "https://www.rijksmuseum.nl/en/collection/SK-A-1365"
+        },
+        "id": null,
+        "objectNumber": "SK-A-1365",
+        "title": "The Battle of Terheide",
+        "hasImage": true,
+        "principalOrFirstMaker": "",
+        "longTitle": null,
+        "showImage": false,
+        "permitDownload": false,
+        "webImage": null,
+        "headerImage": null,
+        "productionPlaces": []
+      },
+      {
+        "links": {
+          "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-3064",
+          "web": "https://www.rijksmuseum.nl/en/collection/SK-A-3064"
+        },
+        "id": null,
+        "objectNumber": "SK-A-3064",
+        "title": "Portrait of a Girl Dressed in Blue",
+        "hasImage": true,
+        "principalOrFirstMaker": "",
+        "longTitle": null,
+        "showImage": false,
+        "permitDownload": false,
+        "webImage": null,
+        "headerImage": null,
+        "productionPlaces": []
+      },
+      {
+        "links": {
+          "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-2860",
+          "web": "https://www.rijksmuseum.nl/en/collection/SK-A-2860"
+        },
+        "id": null,
+        "objectNumber": "SK-A-2860",
+        "title": "View of Houses in Delft, Known as The Little Street",
+        "hasImage": true,
+        "principalOrFirstMaker": "",
+        "longTitle": null,
+        "showImage": false,
+        "permitDownload": false,
+        "webImage": null,
+        "headerImage": null,
+        "productionPlaces": []
+      },
+      {
+        "links": {
+          "self": "https://www.rijksmuseum.nl/api/en/collection/SK-C-109",
+          "web": "https://www.rijksmuseum.nl/en/collection/SK-C-109"
+        },
+        "id": null,
+        "objectNumber": "SK-C-109",
+        "title": "Italian Landscape with a Draughtsman",
+        "hasImage": true,
+        "principalOrFirstMaker": "",
+        "longTitle": null,
+        "showImage": false,
+        "permitDownload": false,
+        "webImage": null,
+        "headerImage": null,
+        "productionPlaces": []
+      },
+      {
+        "links": {
+          "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-2344",
+          "web": "https://www.rijksmuseum.nl/en/collection/SK-A-2344"
+        },
+        "id": null,
+        "objectNumber": "SK-A-2344",
+        "title": "The Milkmaid",
+        "hasImage": true,
+        "principalOrFirstMaker": "",
+        "longTitle": null,
+        "showImage": false,
+        "permitDownload": false,
+        "webImage": null,
+        "headerImage": null,
+        "productionPlaces": []
+      },
+      {
+        "links": {
+          "self": "https://www.rijksmuseum.nl/api/en/collection/SK-A-799",
+          "web": "https://www.rijksmuseum.nl/en/collection/SK-A-799"
+        },
+        "id": null,
+        "objectNumber": "SK-A-799",
+        "title": "Floral Still Life",
+        "hasImage": true,
+        "principalOrFirstMaker": "",
+        "longTitle": null,
+        "showImage": false,
+        "permitDownload": false,
+        "webImage": null,
+        "headerImage": null,
+        "productionPlaces": []
+      }
+    ]
+  }
