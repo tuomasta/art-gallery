@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SearchModel } from '../../models/search-model';
+import { ArtWork } from '../../models/art-collection';
+import { LoadingModel } from '../../models/art-work-details';
 
 @Component({
   selector: 'app-art-list',
@@ -8,14 +9,13 @@ import { SearchModel } from '../../models/search-model';
 })
 export class ArtListComponent implements OnInit {
 
-  @Input() public searchModel: SearchModel;
+  @Input() public artCollection: ArtWork[] | LoadingModel;
 
   constructor() { }
 
   ngOnInit() {
-    this.searchModel = {
-      isLoading: true,
-      artItems: []
+    this.artCollection = {
+      isLoading: true
     };
   }
 }

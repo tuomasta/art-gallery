@@ -1,5 +1,6 @@
 import {ArtCollectionService} from '../../shared/art-collection.service';
-import {ArtItem} from '../../models/art-collection';
+import {ArtWork} from '../../models/art-collection';
+import { LoadingModel } from '../../models/art-work-details';
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
@@ -11,7 +12,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/merge';
 import 'rxjs/add/observable/of';
 
-import { SearchModel } from '../../models/search-model';
+
 
 @Component({
   selector: 'app-art-search',
@@ -19,7 +20,7 @@ import { SearchModel } from '../../models/search-model';
   styleUrls: ['./art-search.component.css']
 })
 export class ArtSearchComponent  implements OnInit {
-  public searchModel$: Observable<SearchModel>;
+  public searchModel$: Observable<ArtWork[] | LoadingModel>;
   public searchSubject = new BehaviorSubject<string>('');
   public isLoading =  false;
   constructor(

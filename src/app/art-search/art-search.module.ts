@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArtListComponent } from './art-list/art-list.component';
 import { ArtSearchComponent } from './art-search/art-search.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const searchRoutes: Routes = [
+  { path: 'art-works', component: ArtSearchComponent},
+];
 
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule.forChild(searchRoutes)
   ],
   declarations: [ArtListComponent, ArtSearchComponent],
   exports: [ArtSearchComponent]

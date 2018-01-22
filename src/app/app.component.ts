@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { ArtItem } from './models/art-collection';
+import { ArtWork } from './models/art-collection';
 import { ArtCollectionService } from './shared/art-collection.service';
 import { Subject } from 'rxjs/Subject';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';

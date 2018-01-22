@@ -1,4 +1,4 @@
-export interface ArtItem {
+export interface ArtWork {
     title: string;
     id: string;
     url: string;

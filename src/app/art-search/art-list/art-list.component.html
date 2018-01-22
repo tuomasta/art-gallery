@@ -1,7 +1,10 @@
-<div *ngIf="searchModel.isLoading">
+<div *ngIf="artCollection.isLoading">
   loading..
 </div>
-<div *ngIf="!searchModel.isLoading">
-  <h2>Items</h2>
-  <p *ngFor="let item of searchModel.artItems">{{item.title}}</p>
+<div *ngIf="!artCollection.isLoading">
+  <div *ngFor="let item of artCollection">
+    <a [routerLink]="['/art-works', item.id]" routerLinkActive="active">  
+      <p>{{item.title}}</p>
+    </a>
+  </div>
 </div>

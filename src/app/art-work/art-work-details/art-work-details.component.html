@@ -1,0 +1,11 @@
+<div *ngIf="artWork.isLoading">
+  loading...
+</div>
+
+<div *ngIf="!artWork.isLoading">
+    <h1>{{ artWork.title }}</h1>
+    <img [src]="artWork.imageSrc" alt="">
+    <p>Creator: {{ artWork.principalMaker }}</p>
+    <p>Description: {{ artWork.description }}</p>
+</div>
+
