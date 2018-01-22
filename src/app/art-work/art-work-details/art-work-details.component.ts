@@ -9,6 +9,11 @@ import { ArtWorkDetails, LoadingModel } from '../../models/art-work-details';
 export class ArtWorkDetailsComponent implements OnInit {
 
   @Input() public artWork: ArtWorkDetails | LoadingModel;
+
+  public get isLoading(): boolean {
+    return (<any> this.artWork).isLoading;
+  }
+
   constructor() { }
 
   ngOnInit() {

@@ -7,5 +7,5 @@ export interface ArtWorkDetails {
 }
 
 export interface LoadingModel {
-    isLoading: boolean;
+    isLoading?: boolean;
 }

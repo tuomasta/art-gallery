@@ -1,8 +1,8 @@
-<div *ngIf="artWork.isLoading">
+<div *ngIf="isLoading">
   loading...
 </div>
 
-<div *ngIf="!artWork.isLoading">
+<div *ngIf="!isLoading">
     <h1>{{ artWork.title }}</h1>
     <img [src]="artWork.imageSrc" alt="">
     <p>Creator: {{ artWork.principalMaker }}</p>

@@ -11,6 +11,10 @@ export class ArtListComponent implements OnInit {
 
   @Input() public artCollection: ArtWork[] | LoadingModel;
 
+  public get isLoading(): boolean {
+    return (<any> this.artCollection).isLoading;
+  }
+
   constructor() { }
 
   ngOnInit() {

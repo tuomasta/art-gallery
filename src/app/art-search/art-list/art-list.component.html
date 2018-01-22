@@ -1,7 +1,7 @@
-<div *ngIf="artCollection.isLoading">
+<div *ngIf="isLoading">
   loading..
 </div>
-<div *ngIf="!artCollection.isLoading">
+<div *ngIf="!isLoading">
   <div *ngFor="let item of artCollection">
     <a [routerLink]="['/art-works', item.id]" routerLinkActive="active">  
       <p>{{item.title}}</p>
