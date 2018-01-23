@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 import { LoadingModel } from '../../models/art-work-details';
 import { ArtCollection } from '../../models/art-collection';
 
-fdescribe('ArtSearchComponent', () => {
+describe('ArtSearchComponent', () => {
   let component: ArtSearchComponent;
   let fixture: ComponentFixture<ArtSearchComponent>;
 
