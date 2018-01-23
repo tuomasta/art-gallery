@@ -1,11 +1,10 @@
-<div *ngIf="isLoading">
-  loading...
-</div>
-
-<div *ngIf="!isLoading">
-    <h1>{{ artWork.title }}</h1>
-    <img [src]="artWork.imageSrc" alt="">
-    <p>Creator: {{ artWork.principalMaker }}</p>
-    <p>Description: {{ artWork.description }}</p>
-</div>
-
+<section class="card">
+  <app-spinner *ngIf="isLoading"></app-spinner>
+  <img [src]="artWork.imageSrc" alt="">
+  <div div class="card-body" *ngIf="!isLoading">
+      <h3>{{ artWork.title }}</h3>
+      <p>{{ artWork.principalMaker }}</p>
+      <br>
+      <p>{{ artWork.description }}</p>
+  </div>
+</section>

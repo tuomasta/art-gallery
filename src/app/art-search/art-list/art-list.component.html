@@ -1,10 +1,19 @@
-<div *ngIf="isLoading">
-  loading..
-</div>
-<div *ngIf="!isLoading">
-  <div *ngFor="let item of artCollection">
-    <a [routerLink]="['/art-works', item.id]" routerLinkActive="active">  
-      <p>{{item.title}}</p>
-    </a>
+<section>
+  <h3>Items</h3>
+  <app-spinner *ngIf="isLoading"></app-spinner>
+  <div *ngIf="!isLoading">
+    <div class="list-group list-group-flush" *ngFor="let item of artWorks">
+      <a class="list-group-item" [routerLink]="['/art-works', item.id]" routerLinkActive="active">  
+        <h6>{{item.title}}</h6>
+        <small>{{item.creator}}</small>
+      </a>
+    </div>
   </div>
-</div>
+  <ngb-pagination 
+    [collectionSize]="numberOfItems"
+    [page]="page"
+    (pageChange)="onPageChange($event)"
+    [maxSize]="5"
+    [boundaryLinks]="true">
+  </ngb-pagination>
+</section>

@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { ArtWork } from '../models/art-collection';
+import { ArtWork, ArtCollection } from '../models/art-collection';
 import { RequestOptionsArgs } from '@angular/http/src/interfaces';
 import { HttpParams, HttpClient } from '@angular/common/http';
 import { ArtWorkDetails, LoadingModel } from '../models/art-work-details';
+
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/retry';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/of';
+
 export interface ISpecifyGetOptions {
   page?: number;
   numberOfItems?: number;
@@ -15,9 +18,6 @@ export interface ISpecifyGetOptions {
 
 @Injectable()
 export class ArtCollectionService {
-  // private readonly baseurl = 'https://www.rijksmuseum.nl/api/en/collection?key=67CFld9n&format=json&q=bridge&s=relevance&ps=2&p=2';
-  // private readonly mock = 'assets/mock-data.json';
-
   private readonly baseurl = 'https://www.rijksmuseum.nl/api/en/collection/';
   constructor(private http: HttpClient) { }
 
@@ -37,20 +37,20 @@ export class ArtCollectionService {
       return {
         title: data.artObject.title,
         id: data.artObject.objectNumber,
-        imageSrc: data.artObject.webImage.url,
+        imageSrc: data && data.artObject && data.artObject.webImage && data.artObject.webImage.url || null,
         principalMaker: data.artObject.principalMaker,
         description: data.artObject.description
       };
     });
   }
 
-  public getSearchModel(options?: ISpecifyGetOptions): Observable<ArtWork[] | LoadingModel> {
+  public getSearchModel(options?: ISpecifyGetOptions): Observable<ArtCollection | LoadingModel> {
     return Observable
       .of({isLoading: true })
       .merge(this.fetchArtCollection(options));
   }
 
-  private fetchArtCollection(options?: ISpecifyGetOptions): Observable<ArtWork[]> {
+  private fetchArtCollection(options?: ISpecifyGetOptions): Observable<ArtCollection> {
     const urlParams: HttpParams = !options ?
       this.createDefaultSearchParamets() :
       this.createSearchParams(options);
@@ -60,21 +60,23 @@ export class ArtCollectionService {
     .map(data => this.parseData(data));
   }
 
-  private parseData(data: any): ArtWork[] {
-    return data.artObjects.map(o => {
-      return {
+  private parseData(data: any): ArtCollection {
+    return {
+      totalNumberOfItems: data.count,
+      artworks: data.artObjects.map(o => ({
        title: o.title,
        id: o.objectNumber,
-       url: o.links.self
-     };
-    });
+       url: o.links.self,
+       creator: o.principalOrFirstMaker
+      }))
+    };
   }
 
   private createSearchParams(options: ISpecifyGetOptions): any {
     const params = this.createDefaultSearchParamets();
     if (options.filter) {
-      params.s = 'relevance';
-      params.q = options.filter;
+      params.S = 'relevance';
+      params.Q = options.filter;
     }
 
     if (options.numberOfItems) params.ps = options.numberOfItems.toString();

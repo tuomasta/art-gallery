@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ArtListComponent } from './art-list/art-list.component';
 import { ArtSearchComponent } from './art-search/art-search.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const searchRoutes: Routes = [
   { path: 'art-works', component: ArtSearchComponent},
@@ -13,6 +14,7 @@ const searchRoutes: Routes = [
   imports: [
     CommonModule,
     SharedModule,
+    NgbModule,
     RouterModule.forChild(searchRoutes)
   ],
   declarations: [ArtListComponent, ArtSearchComponent],

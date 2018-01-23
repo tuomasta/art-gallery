@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ArtCollectionService } from '../../shared/art-collection.service';
-
-import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
 import { ArtWorkDetails, LoadingModel } from '../../models/art-work-details';
+
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-art-work',

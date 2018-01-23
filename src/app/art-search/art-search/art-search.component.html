@@ -1,9 +1,14 @@
-<h1>Art works</h1>
-<div>
-  <input #search id="search" 
-    type="search"
-    placeholder="search art items"
-    (keyup)="searchArt(search.value)"
-    autofocus/>
-</div>
-<app-art-list [artCollection]="searchModel$ | async"></app-art-list>
+<form>
+    <fieldset class="form-group">
+      <legend>Search for art:</legend>
+      <input id="search" #search
+        class="form-control"
+        type="search"
+        placeholder="type to search"
+        (keyup)="searchArt(search.value)"
+        autofocus/>
+    </fieldset>
+</form>
+
+<hr>
+<app-art-list [artCollection]="searchModel$ | async" (pageChange)="onPageChange($event)"></app-art-list>
