@@ -3,7 +3,7 @@
   <app-spinner *ngIf="isLoading"></app-spinner>
   <div *ngIf="!isLoading">
     <div class="list-group list-group-flush" *ngFor="let item of artWorks">
-      <a class="list-group-item" [routerLink]="['/art-works', item.id]" routerLinkActive="active">  
+      <a class="list-group-item" [routerLink]="['/art-gallery', item.id]" routerLinkActive="active">  
         <h6>{{item.title}}</h6>
         <small>{{item.creator}}</small>
       </a>
@@ -11,7 +11,6 @@
   </div>
   <ngb-pagination 
     [collectionSize]="numberOfItems"
-    [page]="page"
     (pageChange)="onPageChange($event)"
     [maxSize]="5"
     [boundaryLinks]="true">

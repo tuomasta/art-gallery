@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const searchRoutes: Routes = [
-  { path: 'art-works', component: ArtSearchComponent},
+  { path: 'art-gallery', component: ArtSearchComponent},
 ];
 
 @NgModule({

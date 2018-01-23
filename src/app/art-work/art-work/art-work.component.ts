@@ -13,14 +13,14 @@ import 'rxjs/add/operator/switchMap';
 })
 export class ArtWorkComponent implements OnInit {
 
-  public artWork$: Observable<ArtWorkDetails | LoadingModel>;
+  public artWorkOrLoading$: Observable<ArtWorkDetails | LoadingModel>;
 
   constructor(
     private route: ActivatedRoute,
     private artService: ArtCollectionService) { }
 
   ngOnInit() {
-    this.artWork$ = this.route.paramMap.switchMap(params => {
+    this.artWorkOrLoading$ = this.route.paramMap.switchMap(params => {
       const id = params.get('id');
       return this.artService.getArtWork(id);
     });

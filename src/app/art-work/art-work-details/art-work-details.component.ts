@@ -8,10 +8,14 @@ import { ArtWorkDetails, LoadingModel } from '../../models/art-work-details';
 })
 export class ArtWorkDetailsComponent implements OnInit {
 
-  @Input() public artWork: ArtWorkDetails | LoadingModel;
+  @Input() public artWorkOrLoading: ArtWorkDetails | LoadingModel;
 
   public get isLoading(): boolean {
-    return (<any> this.artWork).isLoading;
+    return (<any> this.artWorkOrLoading).isLoading;
+  }
+
+  public get art(): ArtWorkDetails {
+    return this.artWorkOrLoading as ArtWorkDetails;
   }
 
   constructor() { }

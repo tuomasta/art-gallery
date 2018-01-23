@@ -19,18 +19,15 @@ export class ArtListComponent {
 
   @Output() public pageChange = new EventEmitter<number>();
 
-  public page = 1;
   public isLoading = true;
   public artWorks: ArtWork[] = [];
   public numberOfItems = 0;
 
   public onPageChange(page: number): void {
-    this.page = page;
     this.pageChange.emit(page);
   }
 
   private onLoading() {
-    this.page = 1;
     this.artWorks = [];
   }
 

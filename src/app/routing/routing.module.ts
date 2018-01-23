@@ -5,8 +5,8 @@ import { ArtSearchComponent } from '../art-search/art-search/art-search.componen
 import { ArtWorkComponent } from '../art-work/art-work/art-work.component';
 
 const appRoutes: Routes = [
-  { path: 'art-works/:id', loadChildren: 'app/art-work/art-work.module#ArtWorkModule'},
-  { path: '**', redirectTo: 'art-works', pathMatch: 'full'},
+  { path: 'art-gallery/:id', loadChildren: 'app/art-work/art-work.module#ArtWorkModule'},
+  { path: '**', redirectTo: 'art-gallery', pathMatch: 'full'},
 ];
 
 @NgModule({
