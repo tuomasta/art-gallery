@@ -38,7 +38,7 @@ export class ArtCollectionService {
         title: data.artObject.title,
         id: data.artObject.objectNumber,
         imageSrc: data && data.artObject && data.artObject.webImage && data.artObject.webImage.url || null,
-        principalMaker: data.artObject.principalMaker,
+        principalMakers: data.artObject.principalMakers.map(m => m.name),
         description: data.artObject.description
       };
     });

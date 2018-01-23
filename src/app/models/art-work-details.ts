@@ -2,7 +2,7 @@ export interface ArtWorkDetails {
     id: string;
     title: string;
     imageSrc: string;
-    principalMaker: string;
+    principalMakers: string[];
     description: string;
 }
 

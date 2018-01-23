@@ -3,7 +3,7 @@
   <img [src]="art.imageSrc" alt="">
   <div div class="card-body" *ngIf="!isLoading">
       <h3>{{ art.title }}</h3>
-      <p>{{ art.principalMaker }}</p>
+      <p *ngFor="let maker of art.principalMakers">{{maker}}</p>
       <br>
       <p>{{ art.description }}</p>
   </div>
