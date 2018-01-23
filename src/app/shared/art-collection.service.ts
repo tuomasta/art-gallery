@@ -51,10 +51,12 @@ export class ArtCollectionService {
   }
 
   private fetchArtCollection(options?: ISpecifyGetOptions): Observable<ArtCollection> {
-    const urlParams: HttpParams = !options ?
+    const params = !options ?
       this.createDefaultSearchParamets() :
       this.createSearchParams(options);
+    const urlParams = new HttpParams({ fromObject: params});
 
+    console.log('params', urlParams);
     return this.http.get<any>(this.baseurl, { params: urlParams })
     .retry(3)
     .map(data => this.parseData(data));

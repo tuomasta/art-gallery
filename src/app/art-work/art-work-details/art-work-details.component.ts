@@ -6,7 +6,7 @@ import { ArtWorkDetails, LoadingModel } from '../../models/art-work-details';
   templateUrl: './art-work-details.component.html',
   styleUrls: ['./art-work-details.component.css']
 })
-export class ArtWorkDetailsComponent implements OnInit {
+export class ArtWorkDetailsComponent {
 
   @Input() public artWorkOrLoading: ArtWorkDetails | LoadingModel;
 
@@ -16,10 +16,5 @@ export class ArtWorkDetailsComponent implements OnInit {
 
   public get art(): ArtWorkDetails {
     return this.artWorkOrLoading as ArtWorkDetails;
-  }
-
-  constructor() { }
-
-  ngOnInit() {
   }
 }

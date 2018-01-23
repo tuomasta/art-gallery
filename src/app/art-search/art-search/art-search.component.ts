@@ -1,8 +1,7 @@
 import { ArtCollectionService } from '../../shared/art-collection.service';
 import { ArtWork, ArtCollection } from '../../models/art-collection';
 import { LoadingModel } from '../../models/art-work-details';
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 
@@ -31,8 +30,7 @@ export class ArtSearchComponent  implements OnInit {
   public searchModel$: Observable<ArtCollection | LoadingModel>;
 
   constructor(
-    private service: ArtCollectionService,
-    private changeDetection: ChangeDetectorRef ) {
+    private service: ArtCollectionService) {
   }
 
   ngOnInit(): void {
@@ -52,7 +50,7 @@ export class ArtSearchComponent  implements OnInit {
       }));
   }
 
-  public searchArt(toSearch: string): void {
+  public onSearch(toSearch: string): void {
     this.searchSubject.next(toSearch);
   }
 
